@@ -1,4 +1,5 @@
 """Models for concert app"""
+
 import os
 from flask_sqlalchemy import SQLAlchemy
 
