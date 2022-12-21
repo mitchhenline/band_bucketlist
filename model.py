@@ -11,7 +11,7 @@ class User(db.Model):
 
     user_id = db.Column(db.Integer, autoincrement=True, primary_key=True)
     email = db.Column(db.String, unique=True)
-    password = db.Columnn(db.String)
+    password = db.Column(db.String)
 
     def __repr__(self):
         return f'User: user_id={self.user_id} email={self.email}'
@@ -28,6 +28,8 @@ class Concert(db.Model):
     venue = db.Column(db.String)
     location = db.Column(db.String)
     band_pic_path = db.Column(db.String)
+
+    user = db.relationship("User", backref="concerts")
 
     def __repr__(self):
         return f'Concert: concert_id={self.concert_id} band={self.band_name}'
