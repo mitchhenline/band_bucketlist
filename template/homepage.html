@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block title %}Concert Checklist{% endblock %}
+
+{% block body %}
+    <h1>Concert Checklist</h1>
+
+    <h2>Navigation</h2>
+    <ul>
+        <li><a href="/concerts/{{ user.user_id }}">Bands I've Seen</a></li>
+        <li><a href="/bucketlist/{{ user.user_id }}">Bands I will See</a></li>
+    </ul>
+{% endblock %}

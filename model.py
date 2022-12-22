@@ -35,6 +35,21 @@ class Concert(db.Model):
     def __repr__(self):
         return f'Concert: concert_id={self.concert_id} band={self.band_name}'
 
+class BucketList(db.Model):
+    """Future Concert Checklist."""
+
+    __tablename__ = "bucketlist"
+
+    future_concert_id = db.Column(db.Integer, autoincrement=True, primary_key=True)
+    band_name = db.Column(db.String)
+    genre = db.Column(db.String)
+    band_pic_path = db.Column(db.String)
+
+    user = db.relationship("User", backref="concerts")
+
+    def __repr__(self):
+        return f'Concert: concert_id={self.concert_id} band={self.band_name}'
+
 def connect_to_db(flask_app, db_uri=os.environ["POSTGRES_URI"], echo=False):
     flask_app.config["SQLALCHEMY_DATABASE_URI"] = db_uri
     flask_app.config["SQLALCHEMY_ECHO"] = echo

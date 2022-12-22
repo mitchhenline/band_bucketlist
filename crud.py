@@ -16,6 +16,9 @@ def create_concert(band_name, genre, date, venue, location, band_pic_path, user)
         user=user)
     return concert
 
+def get_user_by_id(user_id):
+    return User.query.get(user_id)
+
 if __name__ == '__main__':
     from server import app
     connect_to_db(app)
