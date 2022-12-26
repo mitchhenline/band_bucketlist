@@ -16,7 +16,7 @@ def homepage():
 
     return render_template('homepage.html')
 
-@app.route('/concerts/<user_id>')
+@app.route('/concerts')
 def see_concerts(user_id):
     """view seen concert list."""
 
@@ -24,7 +24,7 @@ def see_concerts(user_id):
 
     return render_template('concerts.html', user = user)
 
-@app.route('/bucketlist/<user_id>')
+@app.route('/bucketlist')
 def see_future_concerts(user_id):
     """view bucket list."""
 

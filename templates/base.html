@@ -7,14 +7,17 @@
     <title>
         {% block title %}{% endblock %}
     </title>
-    </div>
     {% block head %}{% endblock %}
 </head>
 <body>
+    
+
     <div class="navigation">
         <a href="/home">Home</a>
-        <a>Bands I've Seen</a>
-        <a>Bands I will See</a>
+        <a href="/concerts">Bands I've Seen</a>
+        <a href="/bucketlist">Bands I will See</a>
+    </div>
+
     {% block body %}{% endblock %}
 
     {% block after_body %}{% endblock %}
