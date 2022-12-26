@@ -7,23 +7,14 @@
     <title>
         {% block title %}{% endblock %}
     </title>
+    </div>
     {% block head %}{% endblock %}
 </head>
 <body>
-    
-    {% for msg in get_flashed_messages() %}
-        <p class = "flash-msg">
-            {{ msg }}
-        </p>
-    {% endfor %}
-
     <div class="navigation">
-        <h2>Navigation</h2>
-            <a href="/home">Home</a>
-            <a href="/concerts/{{ user.user_id }}">Bands I've Seen</a>
-            <a href="/bucketlist/{{ user.user_id }}">Bands I will See</a>
-        </div>
-
+        <a href="/home">Home</a>
+        <a>Bands I've Seen</a>
+        <a>Bands I will See</a>
     {% block body %}{% endblock %}
 
     {% block after_body %}{% endblock %}

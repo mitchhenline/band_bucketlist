@@ -16,6 +16,14 @@ def create_concert(band_name, genre, date, venue, location, band_pic_path, user)
         user=user)
     return concert
 
+def create_future_concert(band_name, genre, band_pic_path, user):
+    concert = Concert(
+        band_name=band_name, 
+        genre=genre,
+        band_pic_path=band_pic_path,
+        user=user)
+    return concert
+
 def get_user_by_id(user_id):
     return User.query.get(user_id)
 
