@@ -25,10 +25,11 @@ class Concert(db.Model):
     concert_id = db.Column(db.Integer, autoincrement=True, primary_key=True)
     band_name = db.Column(db.String)
     genre = db.Column(db.String)
-    date = db.Column(db.DateTime)
+    date = db.Column(db.String)
     venue = db.Column(db.String)
     location = db.Column(db.String)
     band_pic_path = db.Column(db.String)
+    user_id = db.Column(db.Integer, db.ForeignKey("users.user_id"))
 
     user = db.relationship("User", backref="concerts")
 
@@ -44,11 +45,12 @@ class BucketList(db.Model):
     band_name = db.Column(db.String)
     genre = db.Column(db.String)
     band_pic_path = db.Column(db.String)
+    user_id = db.Column(db.Integer, db.ForeignKey("users.user_id"))
 
-    user = db.relationship("User", backref="concerts")
+    user = db.relationship("User", backref="bucketlist")
 
     def __repr__(self):
-        return f'Concert: concert_id={self.concert_id} band={self.band_name}'
+        return f'Concert: future_concert_id={self.future_concert_id} band={self.band_name}'
 
 def connect_to_db(flask_app, db_uri=os.environ["POSTGRES_URI"], echo=False):
     flask_app.config["SQLALCHEMY_DATABASE_URI"] = db_uri

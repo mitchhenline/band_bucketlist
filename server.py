@@ -16,20 +16,20 @@ def homepage():
     return render_template('homepage.html')
 
 @app.route('/concerts/<user_id>')
-def homepage(user_id):
+def see_concerts(user_id):
     """view seen concert list."""
 
     user = crud.get_user_by_id(user_id)
 
     return render_template('concerts.html', user = user)
 
-@app.route('/bucketlist/<user_id>')
-def homepage(user_id):
-    """view bucket list."""
+# @app.route('/bucketlist/<user_id>')
+# def homepage(user_id):
+#     """view bucket list."""
 
-    user = crud.get_user_by_id(user_id)
+#     user = crud.get_user_by_id(user_id)
 
-    return render_template('bucketlist.html', user = user)
+#     return render_template('bucketlist.html', user = user)
 
 if __name__ == "__main__":
     connect_to_db(app)
