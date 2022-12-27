@@ -31,9 +31,11 @@ def login():
 
     #Check to see if a user with this email exists
         user = crud.get_user_by_email(email)
-
+        print("next line")
+        print(password)
+        print(user)
         if not user or user['password'] != password:
-            flash("Invalid email or password")
+            # flash("Invalid email or password")
             return redirect('/login')
 
         session['username'] = user['username']
