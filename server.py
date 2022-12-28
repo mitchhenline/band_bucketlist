@@ -41,25 +41,28 @@ def login():
 
     return render_template("login.html", form=form)
 
+@app.route('/logout')
+def logout():
+
+    del session['email']
+    flash("Logged out.")
+    return redirect("/login")
+
 @app.route('/concerts')
-def see_concerts(user_id):
+def see_concerts():
     """view seen concert list."""
     if 'email' not in session:
         return redirect('/login')
 
-    user = crud.get_user_by_email(email)
-
-    return render_template('concerts.html', user = user)
+    return render_template('concerts.html')
 
 @app.route('/bucketlist')
-def see_future_concerts(user_id):
+def see_future_concerts():
     """view bucket list."""
     if 'email' not in session:
         return redirect('/login')
 
-    user = crud.get_user_by_email(email)
-
-    return render_template('bucketlist.html', user = user)
+    return render_template('bucketlist.html')
 
 if __name__ == "__main__":
     connect_to_db(app)
