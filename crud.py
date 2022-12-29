@@ -30,6 +30,9 @@ def get_user_by_id(user_id):
 def get_user_by_email(email) -> User:
     return User.query.filter(User.email == email).first()
 
+def get_concerts():
+    return Concert.query.all()
+
 
 if __name__ == '__main__':
     from server import app

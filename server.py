@@ -51,16 +51,21 @@ def logout():
 @app.route('/concerts')
 def see_concerts():
     """view seen concert list."""
+
+    concerts = crud.get_concerts()
+
     if 'email' not in session:
         return redirect('/login')
 
-    return render_template('concerts.html')
+
+    return render_template('concerts.html', concerts = concerts)
 
 @app.route('/bucketlist')
 def see_future_concerts():
     """view bucket list."""
     if 'email' not in session:
         return redirect('/login')
+
 
     return render_template('bucketlist.html')
 

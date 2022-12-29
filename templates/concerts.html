@@ -3,6 +3,13 @@
 
 {% block body %}
     <h1>Bands I've Seen</h1>
+    {% for concert in concerts %}
+            <li>
+                <a href="/concerts/{{ concert.concert_id }}">
+                     {{ concert.band_name }}
+                </a>
+            </li>
+    {% endfor %}
     <a href="/logout">Logout</a>
 
     
