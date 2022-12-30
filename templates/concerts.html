@@ -10,8 +10,18 @@
                 </a>
             </li>
     {% endfor %}
+    
+    <form method="POST" action="/add_concert">
+        <div>{{ form.band_name.label }}: {{ form.band_name }}</div>
+        <div>{{ form.date.label }}: {{ form.date }}</div>
+        <div>{{ form.venue.label }}: {{ form.venue }}</div>
+        <div>{{ form.location.label }}: {{ form.location }}</div>
+        <div>{{ form.band_pic_path.label }}: {{ form.band_pic_path }}</div>
+        {{ form.csrf_token }}
+        <button class ="btn btn-primary" type="submit">Add Band</button>
+    </form>
+    
     <a href="/logout">Logout</a>
-
     
 {% endblock %}
 
