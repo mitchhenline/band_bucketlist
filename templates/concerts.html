@@ -11,7 +11,7 @@
             </li>
     {% endfor %}
     
-    <form method="POST" action="/add_concert">
+    <form method="POST" action="/concerts">
         <div>{{ form.band_name.label }}: {{ form.band_name }}</div>
         <div>{{ form.date.label }}: {{ form.date }}</div>
         <div>{{ form.venue.label }}: {{ form.venue }}</div>
