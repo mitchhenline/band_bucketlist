@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block title %}{{ concert.band_name }} - Details{% endblock %}
+
+{% block body %}
+
+<h1 class="band-name-header">{{ concert.band_name }}</h1>
+
+<p class="genre">Genre: {{ concert.genre }}</p>
+<p class="date">Date: {{ concert.date }}</p>
+<p class="venue">Venue: {{ concert.venue }}</p>
+<p class="city">City: {{ concert.location }}</p>
+
+<img class="pic" src="{{ concert.band_pic_path }}">
+
+{% endblock %}

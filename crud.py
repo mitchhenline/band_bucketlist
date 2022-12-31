@@ -5,10 +5,6 @@ from forms import AddConcert
 def create_user(email, password):
     user = User(email=email,password=password)
     return user
-
-def add_concert(band_name, genre, date, venue, location, band_pic_path, user):
-    add_concert_form = AddConcert()
-    
         
 
 def create_future_concert(band_name, genre, band_pic_path, user):
@@ -29,7 +25,8 @@ def get_concerts(email: str):
     user = get_user_by_email(email)
     return Concert.query.filter(Concert.user_id == user.user_id)
 
-
+def get_concert_by_id(concert_id):
+    return Concert.query.get(concert_id)
 
 
 if __name__ == '__main__':

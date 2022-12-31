@@ -5,7 +5,7 @@ from model import connect_to_db, db, User, Concert
 import crud
 from jinja2 import StrictUndefined
 from forms import LoginForm, AddConcert
-from crud import add_concert, get_user_by_email
+from crud import get_user_by_email, get_concert_by_id
 
 app = Flask(__name__)
 app.secret_key= "kilby"
@@ -67,6 +67,7 @@ def post_concert():
         concert = Concert(
             band_name = form.band_name.data,
             date = form.date.data,
+            genre = form.genre.data,
             venue = form.venue.data,
             location = form.location.data,
             band_pic_path = form.band_pic_path.data,
@@ -77,12 +78,14 @@ def post_concert():
         return redirect("/concerts")
     else:
         abort(404)
-# @app.route("/add_concert", methods=["POST"])
-# def add_concert():
 
-#     new_concert = crud.add_concert()
+@app.route('/concerts/<concert_id>')
+def show_concert(concert_id):
+    """Show details of a concert."""
 
+    concert = crud.get_concert_by_id(concert_id)
 
+    return render_template("see_concert.html", concert = concert)
 
 
 @app.route('/bucketlist')
