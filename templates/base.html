@@ -4,15 +4,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/styles.css">
     <title>
         {% block title %}{% endblock %}
     </title>
     {% block head %}{% endblock %}
 </head>
-<body>
+<body class="body">
     
-
     <div class="navigation">
+        <p id="main-title">ConcertChecklist</p>
         <a href="/">Home</a>
         <a href="/concerts">Concerts I've Attended</a>
         <a href="/bucketlist">Concerts I Will Attend</a>
@@ -22,8 +23,10 @@
         <p class="alert alert-warning">{{ message }}</p>
     {% endfor %}
 
+    <div class="main-block">
     {% block body %}{% endblock %}
-
+    </div>
     {% block after_body %}{% endblock %}
+
 </body>
 </html>
