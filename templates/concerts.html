@@ -1,8 +1,11 @@
 {% extends 'base.html' %}
-{% block title %}Concert Checklist{% endblock %}
+
+{% block title %}Concerts I've Attended{% endblock %}
 
 {% block body %}
-    <h1>Bands I've Seen</h1>
+
+<div id = "band-list">
+    <h1>Concerts I've Attended</h1>
     {% for concert in concerts %}
             <li>
                 <a href="/concerts/{{ concert.concert_id }}">
@@ -10,7 +13,10 @@
                 </a>
             </li>
     {% endfor %}
+</div>
     
+<div id="add-band-form">
+    <h1>Add a Concert </h1>
     <form method="POST" action="/concerts">
         <div>{{ form.band_name.label }}: {{ form.band_name }}</div>
         <div>{{ form.date.label }}: {{ form.date }}</div>
@@ -22,8 +28,9 @@
         <button class ="btn btn-primary" type="submit">Add Band</button>
     </form>
     
-    <a href="/logout">Logout</a>
-    
+</div>
+<a href="/logout">Logout</a>
+
 {% endblock %}
 
 

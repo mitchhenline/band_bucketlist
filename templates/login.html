@@ -2,8 +2,10 @@
 {% block title %}Login{% endblock %}
 
 {% block body %}
-    <h2>Please Sign In</h2>
+    <h2>Hold up!</h2>
 
+    <p class="about-paragraph">If you're here because you love live music <br>and you want to track who you've seen live<br>and who you will see live<br>you've come to the right place...</be></p>
+    <p class="about-paragraph">...but you gotta log in first.</p>
     <form method="POST" action="/login">
         <div>{{ form.email.label }}: {{ form.email }}</div>
         <div>{{ form.password.label }}: {{ form.password }}</div>
