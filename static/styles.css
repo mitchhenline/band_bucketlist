@@ -1,11 +1,15 @@
 * {
-    border-width: 1px;
-    border: solid;
-    border-color: red;
-    
+    font-family: 'Kaushan Script', cursive;
 }
-.navigation {background-color: rgb(134, 134, 134, 0.75);
-    color: rgb(0, 0, 0);
+
+html { 
+    background: url(https://images.unsplash.com/photo-1453090927415-5f45085b65c0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2948&q=80) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+.navigation {background-color: rgba(255, 255, 255);
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -13,6 +17,10 @@
     position:sticky;
     top: 0px;
     margin: 0px;
+    border-bottom: 10px, solid, black;
+    border-top: none;
+    border-left: none;
+    border-right: none;
 }
 
 #main-title {
@@ -27,18 +35,34 @@
 
 
 #band-list {
-    background-color: grey;
+    background-color: rgba(200, 200, 200, 0.9);
     margin: 100px;
     margin-bottom: 200px;
     padding-bottom: 20px;
     padding-left: 5px;
     padding-right: 5px;
+    border-radius: 10px;
 }
 
 #add-band-form {
-    background-color: grey;
+    background-color: rgba(200, 200, 200, 0.9);
     margin: 100px;
     padding-bottom: 20px;
     padding-left: 5px;
     padding-right: 5px;
+    border-radius: 10px;
+}
+
+.logout-link {
+    background-color: rgba(200, 200, 200, 0.9);
+    margin: 100px;
+    padding-bottom: 20px;
+    padding-left: 5px;
+    padding-right: 5px;
+    border-radius: 10px;
+}
+
+.link {
+    text-decoration: none;
+    color: black;
 }

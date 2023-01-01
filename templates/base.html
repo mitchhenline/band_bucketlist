@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
+    <style> @import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap'); </style>
     <link rel="stylesheet" href="/static/styles.css">
     <title>
         {% block title %}{% endblock %}
@@ -14,9 +16,9 @@
     
     <div class="navigation">
         <p id="main-title">ConcertChecklist</p>
-        <a href="/">Home</a>
-        <a href="/concerts">Concerts I've Attended</a>
-        <a href="/bucketlist">Concerts I Will Attend</a>
+        <a class="link" href="/">Home</a>
+        <a class="link" href="/concerts">Concerts I've Attended</a>
+        <a class="link" href="/bucketlist">Concerts I Will Attend</a>
     </div>
 
     {% for message in get_flashed_messages() %}
