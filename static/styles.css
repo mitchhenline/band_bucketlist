@@ -70,6 +70,13 @@ html {
     border-radius: 10px;
 }
 
+.band-info-box {
+    background-color: rgba(200, 200, 200, 0.9);
+    margin: 100px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
 #logout {
     text-decoration: none;
     color: black;
@@ -90,5 +97,14 @@ html {
 }
 
 .about-paragraph {
+    font-family: 'PT Sans Narrow', sans-serif;
+}
+
+.pic {
+    width: 450px;
+    border-radius: 7px;
+}
+
+.band-info-text {
     font-family: 'PT Sans Narrow', sans-serif;
 }

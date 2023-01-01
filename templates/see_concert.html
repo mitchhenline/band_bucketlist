@@ -2,18 +2,20 @@
 {% block title %}{{ concert.band_name }} - Details{% endblock %}
 
 {% block body %}
-<div>
-<h1 class="band-name-header">{{ concert.band_name }}</h1>
 
-<p class="genre">{{ concert.genre }}</p>
-<p class="date">{{ concert.date }}</p>
-<p class="venue">{{ concert.venue }}</p>
-<p class="city">{{ concert.location }}</p>
+<div class="band-info-box">
+    <h1 id="band-name-header" class="shadow">{{ concert.band_name }}</h1>
 
-<img class="pic" src="{{ concert.band_pic_path }}">
+    <p class="band-info-text">{{ concert.genre }}</p>
+    <p class="band-info-text">{{ concert.date }}</p>
+    <p class="band-info-text">{{ concert.venue }}</p>
+    <p class="band-info-text">{{ concert.location }}</p>
+
+    <img class="pic" src="{{ concert.band_pic_path }}">
+    <br>
+    <a class ="band-info-text" href="/concerts">Back</a>
 </div>
 
-<a class ="logout-link" href="/concerts">Back</a>
 
 {% endblock %}
 
