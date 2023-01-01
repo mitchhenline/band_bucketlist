@@ -4,20 +4,22 @@
 
     
 {% block body %}
-<h1>Concert Checklist</h1>
-<p class="about-paragraph">A place for live-music enthusiasts to <br>track the artists they've seen live<br>and the artists they will see live</p>
+<div class="home-box">
+    <h1 class="shadow">Concert Checklist</h1>
+    <p class="about-paragraph">A place for live-music enthusiasts to <br>track the artists they've seen live<br>and the artists they will see live</p>
 
 
-<div>
-<p class="about-paragraph"><br>tell us who you've seen here:</p>
-<a href="/concerts">Concerts I've attended</a>
+    <div>
+    <p class="about-paragraph"><br>Tell us who you've seen here:</p>
+    <a class="home-link" href="/concerts">Concerts I've attended</a>
+    </div>
+
+    <div>
+        <p class="about-paragraph"><br>And who you want to see here:</p>
+        <a class="home-link" href="/bucketlist">Concerts I will attend</a>
+    </div>
 </div>
-
-<div>
-    <p class="about-paragraph"><br>and who you want to see here:</p>
-    <a href="/bucketlist">Concerts I will attend</a>
-</div>
-
-<a class ="logout-link" href="/logout">Logout</a>
     
 {% endblock %}
+
+{% block after_body %}{% endblock %}

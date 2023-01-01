@@ -5,10 +5,10 @@
 {% block body %}
 
 <div id = "band-list">
-    <h1 class="div-header">Concerts I've Attended</h1>
+    <h1 class="shadow">Concerts I've Attended</h1>
     {% for concert in concerts %}
-            <li>
-                <a href="/concerts/{{ concert.concert_id }}">
+            <li class="band-list-info">
+                <a class="band-list-info" href="/concerts/{{ concert.concert_id }}">
                      {{ concert.band_name }}
                 </a>
             </li>
@@ -16,7 +16,7 @@
 </div>
     
 <div id="add-band-form">
-    <h1 class="div-header">Add a Concert </h1>
+    <h1 class="shadow">Add a Concert </h1>
     <form method="POST" action="/concerts">
         <div>{{ form.band_name.label }}: {{ form.band_name }}</div>
         <div>{{ form.date.label }}: {{ form.date }}</div>
@@ -29,9 +29,8 @@
  </form>
     
 </div>
-<a class ="logout-link" href="/logout">Logout</a>
 
 {% endblock %}
 
-
+{% block after_body %}{% endblock %}
 

@@ -2,7 +2,8 @@
 {% block title %}Login{% endblock %}
 
 {% block body %}
-    <h2>Log In</h2>
+<div class="log-in-box">
+    <h1 class="shadow">Log In</h1>
 
     <p class="about-paragraph">Happy you're here... <br></p>
     <p class="about-paragraph">...but you gotta log in first.</p>
@@ -12,5 +13,8 @@
         {{ form.csrf_token }}
         <button class ="btn btn-primary" type="submit">Sign In</button>
     </form>
+</div>
 
 {% endblock %}
+
+{% block after_body %}{% endblock %}

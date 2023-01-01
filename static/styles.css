@@ -38,31 +38,57 @@ html {
     background-color: rgba(200, 200, 200, 0.9);
     margin: 100px;
     margin-bottom: 200px;
+    padding-top: 5px;
     padding-bottom: 20px;
     padding-left: 5px;
     padding-right: 5px;
     border-radius: 10px;
+}
+
+.band-list-info {
+    font-family: 'PT Sans Narrow', sans-serif;
 }
 
 #add-band-form {
     background-color: rgba(200, 200, 200, 0.9);
     margin: 100px;
-    padding-bottom: 20px;
-    padding-left: 5px;
-    padding-right: 5px;
+    padding: 10px;
     border-radius: 10px;
 }
 
-.logout-link {
+.log-in-box {
     background-color: rgba(200, 200, 200, 0.9);
     margin: 100px;
-    padding-bottom: 20px;
-    padding-left: 5px;
-    padding-right: 5px;
+    padding: 10px;
     border-radius: 10px;
 }
 
-.link {
+.home-box {
+    background-color: rgba(200, 200, 200, 0.9);
+    margin: 100px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+#logout {
     text-decoration: none;
     color: black;
+    background-color: rgba(200, 200, 200, 0.9);
+    position:fixed;
+    bottom: 25px;
+    right: 40px;
+    border-radius: 3px;
+    padding: 8px;
+}
+
+.shadow {
+    text-shadow: 2px 2px #ceed1a;
+}
+
+.home-link {
+    font-size: 25px;
+}
+
+.about-paragraph {
+    font-family: 'PT Sans Narrow', sans-serif;
 }
