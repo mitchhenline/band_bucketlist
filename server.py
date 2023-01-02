@@ -1,10 +1,10 @@
 """Server for concert app."""
 
 from flask import Flask, render_template, request, flash, session, redirect, abort
-from model import connect_to_db, db, User, Concert
+from model import connect_to_db, db, User, Concert, BucketList
 import crud
 from jinja2 import StrictUndefined
-from forms import LoginForm, AddConcert
+from forms import LoginForm, AddConcert, AddBucketList
 from crud import get_user_by_email, get_concert_by_id
 
 app = Flask(__name__)
@@ -88,14 +88,32 @@ def show_concert(concert_id):
     return render_template("see_concert.html", concert = concert)
 
 
-@app.route('/bucketlist')
+@app.route('/bucketlist', methods=["GET"])
 def see_future_concerts():
     """view bucket list."""
+    form = AddBucketList(request.form)
     if 'email' not in session:
         return redirect('/login')
+    bucket_list = crud.get_bucket_list(session["email"])
+    return render_template('bucketlist.html', bucket_list = bucket_list, form = form)
 
-
-    return render_template('bucketlist.html')
+@app.route('/bucketlist', methods=["POST"])
+def post_future_concert():
+    form = AddBucketList(request.form)
+    if 'email' not in session:
+        return redirect('/login')
+    if form.validate_on_submit():
+        bucket_list = BucketList(
+            band_name = form.band_name.data,
+            genre = form.genre.data,
+            band_pic_path = form.band_pic_path.data,
+            user_id = get_user_by_email(session["email"]).user_id
+        )
+        db.session.add(bucket_list)
+        db.session.commit()
+        return redirect("/bucketlist")
+    else:
+        abort(404)
 
 if __name__ == "__main__":
     connect_to_db(app)

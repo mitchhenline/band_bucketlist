@@ -12,3 +12,8 @@ class AddConcert(FlaskForm):
     venue = StringField('Venue')
     location = StringField('City')
     band_pic_path = StringField('Photo URL')
+
+class AddBucketList(FlaskForm):
+    band_name = StringField('Band or Artist Name', [validators.InputRequired()])
+    genre = StringField('Genre')
+    band_pic_path = StringField('Photo URL')

@@ -1,5 +1,5 @@
 """CRUD operations."""
-from model import db, User, Concert, connect_to_db
+from model import db, User, Concert, connect_to_db, BucketList
 from forms import AddConcert
 
 def create_user(email, password):
@@ -24,6 +24,10 @@ def get_user_by_email(email) -> User:
 def get_concerts(email: str):
     user = get_user_by_email(email)
     return Concert.query.filter(Concert.user_id == user.user_id)
+
+def get_bucket_list(email: str):
+    user = get_user_by_email(email)
+    return BucketList.query.filter(BucketList.user_id == user.user_id)
 
 def get_concert_by_id(concert_id):
     return Concert.query.get(concert_id)
