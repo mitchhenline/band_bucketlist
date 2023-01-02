@@ -82,11 +82,23 @@ def post_concert():
 @app.route('/concerts/<concert_id>')
 def show_concert(concert_id):
     """Show details of a concert."""
-
+    if 'email' not in session:
+        return redirect('/login')
     concert = crud.get_concert_by_id(concert_id)
 
     return render_template("see_concert.html", concert = concert)
 
+@app.route('/concerts/<concert_id>/delete')
+def delete_concert(concert_id):
+    """Delete concert."""
+    if 'email' not in session:
+        return redirect('/login')
+
+    concert = crud.get_concert_by_id(concert_id)
+    db.session.delete(concert)
+    db.session.commit()
+
+    return redirect('/concerts')
 
 @app.route('/bucketlist', methods=["GET"])
 def see_future_concerts():
@@ -118,6 +130,9 @@ def post_future_concert():
 @app.route('/bucketlist/<future_concert_id>')
 def show_future_concert(future_concert_id):
     """Show details of a concert."""
+
+    if 'email' not in session:
+        return redirect('/login')
 
     future_concert = crud.get_future_concert_by_id(future_concert_id)
 

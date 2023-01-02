@@ -11,9 +11,12 @@
     <p class="band-info-text">{{ concert.venue }}</p>
     <p class="band-info-text">{{ concert.location }}</p>
 
+    
     <img class="pic" src="{{ concert.band_pic_path }}">
     <br>
-    <a class ="back-button" href="/concerts">Back</a>
+    
+    <a class ="back-button" href="/concerts">Back to list</a>
+    <a class ="delete-button" href="/concerts/{{ concert.concert_id }}/delete">Remove Band</a>
 </div>
 
 
