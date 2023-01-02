@@ -138,6 +138,18 @@ def show_future_concert(future_concert_id):
 
     return render_template("see_future_concert.html", future_concert = future_concert)
 
+@app.route('/bucketlist/<future_concert_id>/delete')
+def delete_future_concert(future_concert_id):
+    """Delete future concert."""
+    if 'email' not in session:
+        return redirect('/login')
+
+    future_concert = crud.get_future_concert_by_id(future_concert_id)
+    db.session.delete(future_concert)
+    db.session.commit()
+
+    return redirect('/bucketlist')
+
 if __name__ == "__main__":
     connect_to_db(app)
     app.run(host="0.0.0.0", debug=True)
