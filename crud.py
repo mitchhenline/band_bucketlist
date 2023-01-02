@@ -32,6 +32,8 @@ def get_bucket_list(email: str):
 def get_concert_by_id(concert_id):
     return Concert.query.get(concert_id)
 
+def get_future_concert_by_id(future_concert_id):
+    return BucketList.query.get(future_concert_id)
 
 if __name__ == '__main__':
     from server import app

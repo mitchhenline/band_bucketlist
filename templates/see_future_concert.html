@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block title %}{{ future_concert.band_name }} - Details{% endblock %}
+
+{% block body %}
+
+<div class="band-info-box">
+    <h1 id="band-name-header" class="shadow">{{ future_concert.band_name }}</h1>
+
+    <p class="band-info-text">{{ future_concert.genre }}</p>
+
+    <img class="pic" src="{{ future_concert.band_pic_path }}">
+    <br>
+    <a class ="back-button" href="/bucketlist">Back</a>
+</div>
+
+
+{% endblock %}
+
+{% block after_body %}{% endblock %}

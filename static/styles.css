@@ -108,3 +108,16 @@ html {
 .band-info-text {
     font-family: 'PT Sans Narrow', sans-serif;
 }
+
+.back-button {
+    font-family: 'PT Sans Narrow', sans-serif;
+    font-size: 110%;
+    border: 1px;
+    border-color: black;
+    border-style: solid;
+    border-radius: 3px;
+    padding: 3px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    background-color: lightgray;
+}
