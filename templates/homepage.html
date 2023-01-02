@@ -4,21 +4,12 @@
 
     
 {% block body %}
-<div class="home-box">
-    <h1 class="shadow">Concert Checklist</h1>
-    <p class="about-paragraph">A place for live-music enthusiasts to <br>track the artists they've seen live<br>and the artists they will see live</p>
+    <h1 id="home-header">Concert Checklist</h1>
 
+    <a id="home-link-1" href="/concerts">Concerts I've attended</a>
+    <a id="home-link-2" href="/bucketlist">Concerts I will attend</a>
 
-    <div>
-    <p class="about-paragraph"><br>Tell us who you've seen here:</p>
-    <a class="home-link" href="/concerts">Concerts I've attended</a>
-    </div>
-
-    <div>
-        <p class="about-paragraph"><br>And who you want to see here:</p>
-        <a class="home-link" href="/bucketlist">Concerts I will attend</a>
-    </div>
-</div>
+<a class="shadow" id= "logout" href="/logout">Logout</a>
     
 {% endblock %}
 

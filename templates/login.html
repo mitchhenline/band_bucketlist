@@ -2,18 +2,15 @@
 {% block title %}Login{% endblock %}
 
 {% block body %}
-<div class="log-in-box">
-    <h1 class="shadow">Log In</h1>
 
-    <p class="about-paragraph">Happy you're here... <br></p>
-    <p class="about-paragraph">...but you gotta log in first.</p>
-    <form method="POST" action="/login">
-        <div>{{ form.email.label }}: {{ form.email }}</div>
-        <div>{{ form.password.label }}: {{ form.password }}</div>
+    <p id="about-paragraph-1">Happy you're here... <br></p>
+    <p id="about-paragraph-2">...but you gotta log in first.</p>
+    <form class="login-form"method="POST" action="/login">
+        <div id="login-email-box">{{ form.email.label }}: {{ form.email }}</div>
+        <div id="login-password-box">{{ form.password.label }}: {{ form.password }}</div>
         {{ form.csrf_token }}
-        <button class ="btn btn-primary" type="submit">Sign In</button>
+        <button id="login-button" class ="btn btn-primary" type="submit">Sign In</button>
     </form>
-</div>
 
 {% endblock %}
 

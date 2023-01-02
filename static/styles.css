@@ -56,13 +56,6 @@ html {
     border-radius: 10px;
 }
 
-.log-in-box {
-    background-color: rgba(200, 200, 200, 0.9);
-    margin: 100px;
-    padding: 10px;
-    border-radius: 10px;
-}
-
 .home-box {
     background-color: rgba(200, 200, 200, 0.9);
     margin: 100px;
@@ -92,8 +85,25 @@ html {
     text-shadow: 2px 2px #ceed1a;
 }
 
-.home-link {
+#home-link-1 {
     font-size: 25px;
+    color: rgb(0, 0, 0);
+    font-family: 'PT Sans Narrow', sans-serif;
+    margin-top: 300px;
+    margin-right: 140px;
+    background-color: rgba(200, 200, 200, 0.9);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+#home-link-2 {
+    font-size: 25px;
+    color: rgb(0, 0, 0);
+    font-family: 'PT Sans Narrow', sans-serif;
+    margin-top: 300px;
+    background-color: rgba(200, 200, 200, 0.9);
+    padding: 10px;
+    border-radius: 10px;
 }
 
 .about-paragraph {
@@ -134,4 +144,59 @@ html {
     padding-bottom: 1px;
     background-color: lightgray;
     position: relative;
+}
+
+#home-header {
+    text-shadow: 3px 3px white;
+    font-size: 90px;
+    color:#ceed1a;
+    position: sticky;
+    top: 200px;
+}
+
+#about-paragraph-1 {
+    font-family: 'PT Sans Narrow', sans-serif;
+    color: white;
+    font-size: 45px;
+    text-shadow: 3px 3px black;
+    position:fixed;
+    top: 300px;
+    right: 150px;
+}
+
+#about-paragraph-2 {
+    font-family: 'PT Sans Narrow', sans-serif;
+    color: white;
+    font-size: 45px;
+    text-shadow: 3px 3px black;
+    position:fixed;
+    top: 400px;
+    right: 150px;
+}
+
+#login-email-box {
+    position:fixed;
+    top: 550px;
+    right: 150px;
+    color: white;
+    font-family: 'PT Sans Narrow', sans-serif;
+}
+
+#login-password-box {
+    position:fixed;
+    top: 600px;
+    right: 150px;
+    color: white;
+    font-family: 'PT Sans Narrow', sans-serif;
+}
+
+#login-button {
+    position:fixed;
+    top: 650px;
+    right: 150px;
+    font-family: 'PT Sans Narrow', sans-serif;
+}
+
+.login-form {
+    font-family: 'PT Sans Narrow', sans-serif;
 }
