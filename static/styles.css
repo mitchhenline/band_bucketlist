@@ -2,6 +2,15 @@
     font-family: 'Kaushan Script', cursive;
 }
 
+.alert {
+    color: #ceed1a;
+    font-size: 45px;
+    position:absolute;
+    right:160px;
+    top:120px;
+    font-family: 'PT Sans Narrow', sans-serif;
+}
+
 html { 
     background: url(https://images.unsplash.com/photo-1453090927415-5f45085b65c0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2948&q=80) no-repeat center center fixed; 
     -webkit-background-size: cover;
@@ -38,17 +47,26 @@ html {
 
 #band-list {
     background-color: rgba(200, 200, 200, 0.9);
-    margin: 100px;
-    margin-bottom: 200px;
+    margin: 200px;
     padding-top: 5px;
     padding-bottom: 20px;
     padding-left: 5px;
     padding-right: 5px;
     border-radius: 10px;
+    
 }
 
 .band-list-info {
     font-family: 'PT Sans Narrow', sans-serif;
+    text-decoration: none;
+    color: black;
+}
+
+.band-list-info:hover {
+    font-family: 'PT Sans Narrow', sans-serif;
+    text-decoration: none;
+    color: black;
+    text-shadow: 3px 3px #ceed1a;
 }
 
 #add-band-form {
@@ -81,6 +99,11 @@ html {
     right: 40px;
     border-radius: 3px;
     padding: 8px;
+    font-family: 'PT Sans Narrow', sans-serif;
+}
+
+#logout:hover {
+    text-shadow: 2px 2px #ceed1a;
 }
 
 .shadow {
@@ -127,6 +150,8 @@ html {
 
 .band-info-text {
     font-family: 'PT Sans Narrow', sans-serif;
+    text-decoration: none;
+    color: black;
 }
 
 .back-button {
