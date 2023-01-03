@@ -54,6 +54,7 @@ def see_concerts():
     """view seen concert list."""
     form = AddConcert(request.form)
     if 'email' not in session:
+        flash("Please log in")
         return redirect('/login')
     concerts = crud.get_concerts(session["email"])
     return render_template('concerts.html', concerts = concerts, form=form)
@@ -105,6 +106,7 @@ def see_future_concerts():
     """view bucket list."""
     form = AddBucketList(request.form)
     if 'email' not in session:
+        flash("Please log in")
         return redirect('/login')
     bucket_list = crud.get_bucket_list(session["email"])
     return render_template('bucketlist.html', bucket_list = bucket_list, form = form)

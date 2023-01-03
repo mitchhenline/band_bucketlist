@@ -45,21 +45,12 @@ html {
 }
 
 
-#band-list {
-    background-color: rgba(200, 200, 200, 0.9);
-    margin: 200px;
-    padding-top: 5px;
-    padding-bottom: 20px;
-    padding-left: 5px;
-    padding-right: 5px;
-    border-radius: 10px;
-    
-}
 
 .band-list-info {
     font-family: 'PT Sans Narrow', sans-serif;
     text-decoration: none;
     color: black;
+    font-size: 24px;
 }
 
 .band-list-info:hover {
@@ -67,13 +58,6 @@ html {
     text-decoration: none;
     color: black;
     text-shadow: 3px 3px #ceed1a;
-}
-
-#add-band-form {
-    background-color: rgba(200, 200, 200, 0.9);
-    margin: 100px;
-    padding: 10px;
-    border-radius: 10px;
 }
 
 .home-box {
@@ -254,4 +238,29 @@ html {
 #main-title {
     text-decoration: none;
     color: black;
+}
+
+#band-list {
+    background-color: rgba(200, 200, 200, 0.9);
+    margin: 20px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+#add-band-form {
+    background-color: rgba(200, 200, 200, 0.9);
+    margin: 20px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+#subhead {
+    color: #ceed1a;
+    text-shadow: 2px 2px rgb(0, 0, 0);
+}
+
+.form-input {
+    display: flex;
+    align-content: right;
+    /* figure this part out next */
 }

@@ -4,26 +4,27 @@
 
 {% block body %}
 
+<h1 id="subhead" class="shadow">Concerts I've Attended</h1>
+
 <div id = "band-list">
-    <h1 class="shadow">Concerts I've Attended</h1>
     {% for concert in concerts %}
-            <li class="band-list-info">
+
                 <a class="band-list-info" href="/concerts/{{ concert.concert_id }}">
                      {{ concert.band_name }}
-                </a>
-            </li>
+                </a><br>
     {% endfor %}
 </div>
+
+<h1 id="subhead" class="shadow">Add a Concert </h1>
     
 <div id="add-band-form">
-    <h1 class="shadow">Add a Concert </h1>
     <form method="POST" action="/concerts">
-        <div>{{ form.band_name.label }}: {{ form.band_name }}</div>
-        <div>{{ form.date.label }}: {{ form.date }}</div>
-        <div>{{ form.genre.label }}: {{ form.genre }}</div>
-        <div>{{ form.venue.label }}: {{ form.venue }}</div>
-        <div>{{ form.location.label }}: {{ form.location }}</div>
-        <div>{{ form.band_pic_path.label }}: {{ form.band_pic_path }}</div>
+        <div class="form-input">{{ form.band_name.label }}: {{ form.band_name }}</div>
+        <div class="form-input">{{ form.date.label }}: {{ form.date }}</div>
+        <div class="form-input">{{ form.genre.label }}: {{ form.genre }}</div>
+        <div class="form-input">{{ form.venue.label }}: {{ form.venue }}</div>
+        <div class="form-input">{{ form.location.label }}: {{ form.location }}</div>
+        <div class="form-input">{{ form.band_pic_path.label }}: {{ form.band_pic_path }}</div>
         {{ form.csrf_token }}
         <button class ="btn btn-primary" type="submit">Add Concert</button>
  </form>
