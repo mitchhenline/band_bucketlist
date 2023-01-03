@@ -141,28 +141,29 @@ html {
 .back-button {
     font-family: 'PT Sans Narrow', sans-serif;
     font-size: 110%;
-    border: 1px;
-    border-color: black;
-    border-style: solid;
-    border-radius: 3px;
-    padding: 3px;
-    padding-top: 1px;
-    padding-bottom: 1px;
-    background-color: lightgray;
+    padding: 1px;
+    font-family: 'PT Sans Narrow', sans-serif;
+    color: black;
+    text-decoration: none;
 }
+
+.back-button:hover {
+text-shadow: 3px 3px #ceed1a;
+}
+
+
 
 .delete-button {
     font-family: 'PT Sans Narrow', sans-serif;
     font-size: 110%;
-    border: 1px;
-    border-color: black;
-    border-style: solid;
-    border-radius: 3px;
-    padding: 3px;
-    padding-top: 1px;
-    padding-bottom: 1px;
-    background-color: lightgray;
-    position: relative;
+    padding: 1px;
+    font-family: 'PT Sans Narrow', sans-serif;
+    color: black;
+    text-decoration: none;
+}
+
+.delete-button:hover {
+    text-shadow: 3px 3px #ceed1a;
 }
 
 #home-header {

@@ -3,19 +3,17 @@
 
 {% block body %}
 
+<h1 id="subhead" class="shadow">My Concert Bucketlist</h1>
     <div id = "band-list">
-        <h1 class="shadow">My Concert Bucketlist</h1>
         {% for concert in bucket_list %}
-                <li class="band-list-info">
                     <a class="band-list-info" href="/bucketlist/{{ concert.future_concert_id }}">
                          {{ concert.band_name }}
-                    </a>
-                </li>
+                    </a><br>
         {% endfor %}
     </div>
 
+ <h1 id="subhead" class="shadow">Add To Your Bucketlist</h1>
     <div id="add-band-form">
-        <h1 class="shadow">Add To Your Bucketlist</h1>
         <form method="POST" action="/bucketlist">
             <div>{{ form.band_name.label }}: {{ form.band_name }}</div>
             <div>{{ form.genre.label }}: {{ form.genre }}</div>

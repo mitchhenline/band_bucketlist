@@ -37,7 +37,6 @@ def login():
             return redirect('/login')
 
         session['email'] = user.email
-        flash('Logged in.')
         return redirect('/')
 
     return render_template("login.html", form=form)
