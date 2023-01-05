@@ -15,11 +15,11 @@
  <h1 id="subhead" class="shadow">Add To Your Bucketlist</h1>
     <div id="add-band-form">
         <form method="POST" action="/bucketlist">
-            <div>{{ form.band_name.label }}: {{ form.band_name }}</div>
-            <div>{{ form.genre.label }}: {{ form.genre }}</div>
-            <div>{{ form.band_pic_path.label }}: {{ form.band_pic_path }}</div>
+            <div>{{ form.band_name.label }}: {{ form.band_name(class="band-input") }}</div>
+            <div>{{ form.genre.label }}: {{ form.genre(class="band-input") }}</div>
+            <div>{{ form.band_pic_path.label }}: {{ form.band_pic_path(class="band-input") }}</div>
             {{ form.csrf_token }}
-            <button class ="btn btn-primary" type="submit">Add to list</button>
+            <button id="button-font" class ="btn btn-primary" type="submit">Add to list</button>
      </form>
 
      <a id= "logout" href="/logout">Logout</a>

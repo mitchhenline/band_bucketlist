@@ -260,8 +260,26 @@ text-shadow: 3px 3px #ceed1a;
     text-shadow: 2px 2px rgb(0, 0, 0);
 }
 
-.form-input {
-    display: flex;
-    align-content: right;
-    /* figure this part out next */
+#add-band-form {
+    display: inline;
+    float: left;
+    justify-content: right;
+
+}
+
+.band-input {
+    margin: 5px;
+    background-color: rgba(200, 200, 200, 0.1);
+    border: none;
+    border-bottom: 1px;
+    border-bottom-style: solid;
+}
+
+#button-font {
+    font-family: 'PT Sans Narrow', sans-serif;
+}
+
+#button-font:hover {
+    font-family: 'PT Sans Narrow', sans-serif;
+    text-shadow: 3px 3px #ceed1a;
 }

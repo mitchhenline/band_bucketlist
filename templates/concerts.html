@@ -17,15 +17,15 @@
 <h1 id="subhead" class="shadow">Add a Concert </h1>
     
 <div id="add-band-form">
-    <form method="POST" action="/concerts">
-        <div class="form-input">{{ form.band_name.label }}: {{ form.band_name }}</div>
-        <div class="form-input">{{ form.date.label }}: {{ form.date }}</div>
-        <div class="form-input">{{ form.genre.label }}: {{ form.genre }}</div>
-        <div class="form-input">{{ form.venue.label }}: {{ form.venue }}</div>
-        <div class="form-input">{{ form.location.label }}: {{ form.location }}</div>
-        <div class="form-input">{{ form.band_pic_path.label }}: {{ form.band_pic_path }}</div>
+    <form class="band-input-form" method="POST" action="/concerts">
+        <div class="form-input">{{ form.band_name.label }}: {{ form.band_name(class="band-input") }}</div>
+        <div class="form-input">{{ form.date.label }}: {{ form.date(class="band-input") }}</div>
+        <div class="form-input">{{ form.genre.label }}: {{ form.genre(class="band-input") }}</div>
+        <div class="form-input">{{ form.venue.label }}: {{ form.venue(class="band-input") }}</div>
+        <div class="form-input">{{ form.location.label }}: {{ form.location(class="band-input") }}</div>
+        <div class="form-input">{{ form.band_pic_path.label }}: {{ form.band_pic_path(class="band-input") }}</div>
         {{ form.csrf_token }}
-        <button class ="btn btn-primary" type="submit">Add Concert</button>
+        <button id="button-font" class ="btn btn-primary" type="submit">Add Concert</button>
  </form>
     
 </div>
